@@ -30,7 +30,7 @@ body {
     font-family: 'Poppins', sans-serif;
     font-size: 16px;
     font-weight: 400;
-    overflow-x: hidden;
+    overflow-x: hidden !important;
 }
 a{
     font-family: inherit;
@@ -209,40 +209,51 @@ header {
 
 }
 
-.sliders{
-.slider{
-    img{
-        object-fit: cover;
-    }
-    position: relative;
-    object-fit: cover;
-    .content{
-        position: absolute;
-        top: 210px;
-        left: 35px;
-        h1{
-            font-size: 60px !important;
-            @include res7{
-                font-size: 45px !important;
-            }
+.sliderss{
+    margin-bottom: 20px;
+    .carousel-indicators{
+        @include res7{
+            display: none;
         }
     }
-    .content2{
-        position: absolute;
-        top: 210px;
-        right: 35px;
-        h1{
-            font-size: 60px !important;
-            @include res7{
-                font-size: 45px !important;
+    .carousel-caption{
+        bottom:20% !important;
+        left: 5% !important; 
+        @include res7{
+            bottom:5% !important;
+        }
+        @include res4{
+            bottom: 0 !important;
+        }
+        @include res3{
+            bottom: 0 !important;
+        }
+        h1{font-size: 40px; font-weight: bold;
+        @include res4{
+            font-size: 20px !important;
+        }
+        }
+        h3{
+            @include res4{
+                font-size: 17px;
             }
         }
+        a{
+            @include res4{
+                font-size: 12px !important;
+            }
+        }
+
     }
-   
+    .carousel-control-prev{
+        display: none;
+    }
+    .carousel-control-next{
+        display: none;
+    }
 }
-.bx-wrapper .bx-prev{display: none !important;}
-.bx-wrapper .bx-next{display: none !important;}
-}
+
+
 .bainner{
     .gap{
         @include res4{
@@ -307,10 +318,10 @@ header {
 
             }
             @include res4{
-                left: 13%;
+                left: 13% !important;
             }
             @include res3{
-                left: 2%;
+                left: 2% !important;
             }
         }
         &::after{
@@ -544,10 +555,35 @@ header {
 .st1{
     h2{
         &::after{
-            right: 33% !important;
+            right: 33%;
+            @include res10{
+                right: 21% !important;
+            }
+            @include res7{
+                right: 6% !important;
+            }
+            @include res4{
+                right: 0 !important;
+            }
+            @include res3{
+                right: 0 !important;
+            }
         }
         &::before{
-            left: 33% !important;
+            left: 33% ;
+            @include res10{
+                left: 21% !important;
+            }
+            @include res7{
+                left: 6% !important;
+            }
+            @include res4{
+                left: 0 !important;
+            }
+            @include res3{
+                left: 0 !important;
+            }
+            
         }
     }
 }
@@ -758,10 +794,34 @@ footer{
     }
 }
 .end{
+ .left{
+    a{
+        @include res7{
+            font-size: 11px !important;
+        }
+    }
+ }
     .right{
+        flex-grow: 1;
+        text-align: right;
+        @include res7{
+            text-align: left;
+
+        }
+        ul{
+            li{
+                display: inline !important;
+                @include res7{
+                    display: inline !important;
+                }
+            }
+        }
         a{
             color: white;
             padding: 0 10px;
+            @include res7{
+                font-size: 13px !important;
+            }
             &:hover{
                 color: aqua;
             }
@@ -773,9 +833,9 @@ footer{
 
 // loader
 
-.body{
-    display: none;
-}
+// .body{
+//     display: none;
+// }
 .loader{
     position: absolute;
     top: 50%;

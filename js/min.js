@@ -31,8 +31,8 @@ $(document).ready(function(){
       }
   })
   });
-// setTimeout(loads,'6000')
-// function loads(){
-// document.querySelector('.loader').style.display='none'
+setTimeout(loads,'6000')
+function loads(){
+document.querySelector('.loader').style.display='none'
 // document.querySelector('.body').style.display='block'
-// }
+}
